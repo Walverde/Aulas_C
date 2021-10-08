@@ -18,3 +18,11 @@ main(){
     printf("A nota media e: %.1f \n\n", media);
 
 }
+
+
+// obs.
+
+// ______________________________________________________________________________
+
+// para pegar um valor, como hora, na mesma entrada, pode ser usar uma entrada nesse formato: 
+// scanf("%f:%f);

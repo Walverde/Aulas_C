@@ -1,13 +1,14 @@
 #include <stdio.h>
 
 main(){
+    // assim como no arduino, tem varios tipos de variaveis, longint, float, char... 
     int codigo;
     float n1;
     char sadadsas;
     // Vai ler o valor e armazerna na variavel informada. 
     // o %d siginifica o tipo de varivel. 
     printf ("Insira o codigo de matricula: ");
-    scanf("%05d", &codigo); // Essa parte Seta o valor a variavel. 
+    scanf("%05d", &codigo); // Essa parte Seta o valor a variavel, onde nessa variavel  o codigo requer 5 digitos. 
      
     printf ("Codigo de Matricura = %05d \n\n", codigo); // Imprimindo usadno uma mariavel
 
@@ -17,7 +18,7 @@ main(){
     printf ("Insira o valor da nota: ");
     scanf("%f", &n1); // Ledo valor para n1, onde %f informa que o valor lido sera float. Para formatar o numero de caracteres lidos: %.5f, onde sera lido um valor com até 5 casa decimais.  
 
-    printf ("Nota da prova= %f \n\n", n1); // Imprimindo usadno uma mariavel, 
+    printf ("Nota da prova= %f \n\n", n1); // Imprimindo usadno uma mariavel.
     
 }
 
