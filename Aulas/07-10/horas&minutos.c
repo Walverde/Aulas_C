@@ -12,7 +12,6 @@ main(){
     
     // imprimndo horas
     printf("Hora atual %.0f horas %.0f minutos \n\n", horas, minutos);
-
     printf("n%c",166);
 
 }
