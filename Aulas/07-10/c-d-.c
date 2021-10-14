@@ -21,7 +21,7 @@ main(){
 
     printf ("Digite a primeira letra do seu nome: ");
     scanf("%c", &letra);
-    printf ("Seu nome comeca com %c \n\n", letra);
+    printf ("Seu nome comeca com %c \n\n", &letra);
 
     getchar(); // para a tela aguardanbdo o entrer. 
     
