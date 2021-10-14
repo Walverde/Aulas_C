@@ -24,7 +24,7 @@ int main()
         printf("REPROVADO");
         printf("\n\n");
     }
-    printf("\n\n");
+
     system("PAUSE");
     return(0);
 }
