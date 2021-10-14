@@ -16,7 +16,7 @@ int main()
 
     media=((prova01+prova02+prova03)/3);
 
-    if( media > 6 ){
+    if( media >= 6 ){
         printf("ARPOVADO");
         printf("\n\n");
     }
