@@ -27,7 +27,7 @@ int main()
 
     faltas=(faltas*100/aulas);
 
-    if( media > 6 && faltas > 25){
+    if( media > 6 && faltas < 25){
         printf("ARPOVADO");
         printf("\n\n");
     }

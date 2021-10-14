@@ -1,39 +1,47 @@
 #include <stdio.h>
 #include <math.h>
 
+    float altura, peso, ideal;
+    char sexo;
 
 int main()
 
 {
-    float altura, peso, ideal;
-    char sexo;
+    sexo = "h";
 
     printf("Insira seu peso: ");
-    printf("\n\n");
     scanf("%f", &peso);
+    printf("\n");
 
-    printf("Insira sua altura");
-    printf("\n\n");
+    printf("Insira sua altura: ");
     scanf("%f", &altura);
+    printf("\n");
+    getchar();
     
-    printf("Qual seu sexo? M para  mulher e H para homem");
-    printf("\n\n");
+    printf("Qual seu sexo? M para  mulher e H para homem: ");
     scanf("%c", &sexo);
-    printf("Valor de sexo informado = %c \n\n", &sexo);
+    printf("\n");
+    printf("Valor de sexo informado = %.0c \n", &sexo);
 
     if(sexo == 'h'){
-        printf("Valor de sexo informado = %c \n\n", &sexo);
-        printf("\n\n"); 
+        printf("_________________________________________ \n\n");
+        printf("Valor de sexo informado = %c\n", &sexo);
         printf("Sexo masculino ");
+        ideal = (peso*altura)-58;
+        printf("\n"); 
+        printf("Seu peso idela eh = %.0f", &ideal);
         printf("\n\n"); 
-        ideal= (72,7*altura-58);
+        printf("_________________________________________ \n\n");
     }
     else {
-        printf("Valor de sexo informado = %c", &sexo);
-        printf("\n\n"); 
+        printf("_________________________________________ \n\n");
+        printf("Valor de sexo informado = %c\n", &sexo);
         printf("Sexo Feminino");
-        printf("\n\n"); 
-        ideal= (62,7*altura-44,7);
+        ideal= (peso*altura)-447;
+        printf("\n"); 
+        printf("Seu peso idela eh = %.0f", &ideal);
+        printf("\n"); 
+        printf("_________________________________________ \n\n");
     }
 
     // system("PAUSE");
