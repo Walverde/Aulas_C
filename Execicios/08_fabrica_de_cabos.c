@@ -16,11 +16,11 @@ main(){
     scanf("%f", &minutos);
     printf("\n");
 
-    caixas = (minutos/60*0.75)/300;
-    metros = (minutos/60)*0.75;
+    caixas = (minutos*60*0.75)/300;
+    metros = minutos*60*0.75;
     hora = minutos/60;
 
-    printf("Em %.1fh, e %.1fmin, foi produzido: %.1f metros de fios e %.0f caixas", hora, minutos, metros, caixas);
+    printf("Em %.1fh, e %.1fmin, foi produzido: %.1f metros de fios e %.1f caixas", hora, minutos, metros, caixas);
     // system("PAUSE");
 
     return(0);
