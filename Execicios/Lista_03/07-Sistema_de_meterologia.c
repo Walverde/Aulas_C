@@ -88,6 +88,78 @@ int color_full(char color[10], char text[10]){
 
 }
 
+
+
+
+
+int color_full(char color[10], char text[10]){
+    // char red[10] = "red";
+
+    if (color == "red"){
+        printf("\033[0;31m");
+        printf("%s", text);
+        printf("\033[0m");
+        } 
+        else
+        {
+            if (color == "green")
+            {
+                printf("\033[0;32m");
+                printf("%s", text);
+                printf("\033[0m");    
+            }else
+            {
+                if(color == "yellow")
+                {
+                    printf("\033[0;33m");
+                    printf("%s", text);
+                    printf("\033[0m");
+                }else
+                {
+                    if(color == "blue")
+                    {
+                        printf("\033[0;34m");
+                        printf("%s", text);
+                        printf("\033[0m");
+                    }else
+                    {
+                        if(color == "pruple")
+                        {
+                            printf("\033[0;35m");
+                            printf("%s", text);
+                            printf("\033[0m");
+                        }else
+                        {
+                            if(color == "cyan")
+                            {
+                                printf("\033[0;36m");
+                               printf("%s", text);
+                                printf("\033[0m");
+                            }else
+                            {
+                                if(color == "white")
+                                {
+                                    printf("\033[0;37m");
+                                    printf("%s", text);
+                                    printf("\033[0m");
+                                }else
+                                {
+                                    printf("COR INVALIDA");
+                                    exit(3);
+                                        
+                                }//else invalido
+                            }//else white
+                        }//else cyan
+                    }// else pruple
+                }// Else blue
+            }// ELSE yello
+            
+        }//else green
+
+}
+
+
+
 main()
 {
     int i,j,o, n_postos;

@@ -146,7 +146,7 @@ main()
             color_full("green","Acertou mizeravi! ");
             break;
         }else{
-            color_full("red","Rerrou!, tente de novo! \n");
+            color_full("red","Erroooooou!, tente de novo! \n");
             
         }
     }

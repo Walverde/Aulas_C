@@ -2,10 +2,23 @@
 #include <string.h>
 
 /*
-Elabore um programa em linguagem C 
-que leia uma string e informe quantas 
-vogais e quantas consoantes há nesta string.
+Escreva um programa em linguagem C para ler uma palavra e 
+reescrevê-la colocando um sublinhados na metade da palavra 
+(tamanho da palavra / 2), conforme o exemplo:
+
+UNIVERSIDADE
+
+UNIVER _ _ _ _ _ _
+
+O programa deve dizer quantas letras tem a palavra original 
+e pedir para o usuário dizer qual é a palavra. Se o usuário 
+acertar, o programa deve escrever "Parabéns, você acertou!!!”, 
+caso contrário ele deve dizer para o usuário tentar novamente 
+e repetir o processo.
+
 */
+
+
 int color_full(char color[10], char text[10]){
     // char red[10] = "red";
 
@@ -73,74 +86,61 @@ int color_full(char color[10], char text[10]){
 }
 
 
+
+
 main()
 {
-    char frase[30], aux[29], resto[30]; 
-	int i,vogal=0,consoante=0, range = 3, tamanho=0 ;
+    char word[30], user_input_word[30], owner_input_word[30]; 
+	int i, vogal=0, consoante=0, range = 3, tamanho, metade;
 
-    printf("insira a string: [%d]:",i=0);
-    // scanf("%s",&frase);
-    // gets(frase);
-    fgets(frase,30,stdin);
+    printf("INSIRA A PALAVRA DA RODADA! :D -> ");
+    getchar();
+    fgets(word,31,stdin);
 
-    for(i=0;i<30;i++){
-        if(frase[i] == 'a'){
-            vogal++;
-            }else{
-                if(frase[i] == 'e'){
-                vogal++;
-            }else{
-                if(frase[i] == 'i'){
-                vogal++;
-                }else{
-                    if(frase[i] == 'o'){
-                    vogal++;
-                    }else{
-                      if(frase[i] == 'u'){
-                            vogal++;
-                            }else{
-                                if(frase[1] =! frase[30]){
-                                    consoante++;
-                                }
-                                
-                        }
-                    }
+    printf("Debug, Input Letra:");
+    printf(" %s", word);
 
-                }
-            }
-        
+    tamanho = strlen(word);
+    metade = tamanho/2;
+
+    printf("Debug, Input Letra:");
+    printf(" %s", word);
+
+    for(i=metade;i<tamanho;i++){
+        // printf("For");
+        word[i] = '_';
+    }
+    
+    // SAIDA -----------------------------------------------------------------------
+
+    printf("\n ________________________________________  \n");
+    printf("Faltando: ");
+    printf("%d", metade);
+    printf(" letras em um total de: ");
+    printf("%d", tamanho);
+    printf(", letras");
+    printf("\n ----------------------------------------  \n");
+    printf("Qual a palavra?: ");
+    
+    for(i=-1;i<tamanho;i++){
+        printf("%c ",word[i]);
+    }
+    printf("\n");
+
+    fgets(user_input_word,31,stdin);
+    
+    while (user_input_word != word)
+    {
+        fgets(user_input_word,31,stdin);
+        if (user_input_word == word)
+        {
+            printf("Acertou mizeravi! ");
+            break;
+        }else{
+            printf("Rerrou!, tente de novo! \n");
+            
         }
     }
-    // Printando Array 
-    tamanho = strlen(frase);
-
-    printf("\n");
-    color_full("yellow", "________________________________________  ");
-    printf("String Lida:   %s", frase);
-    // printf("________________________________________  \n");
-    
-    printf("\n");
-    color_full("yellow", "________________________________________  ");
-    printf("\n");
-    color_full("cyan", "                Dados ");
-    printf("Tamanho da String: %d \n", tamanho);
-    printf("Letra 1: %c \n", frase[0]);
-    printf("Letra 3: %c \n", frase[3]);
-    printf("Ultima: %c \n", frase[30]);
-    
-    for(i=0;i<tamanho;i++){
-        // printf("into for");
-        printf("%c,",frase[i]);
-    }
-    // PRINTS ---------------------------------------------------------------
-    printf("\n");
-    color_full("yellow", "________________________________________  ");
-    printf("\n");
-    color_full("cyan", "Contagens de Vogais e Consoantes  ");
-    printf("\n");
-    color_full("yellow", "________________________________________  ");
-    printf("\n");
-    printf("Numero de Vogais = %d,",vogal-1); 
-    printf("\n"); //----------------------IMPAR----------------------------
-    printf("Numero de Consoantes = %d,\n",tamanho-vogal-1);
+    printf("\n________________________________________  \n");
+    exit(3);
 } 
